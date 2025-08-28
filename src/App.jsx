@@ -1,13 +1,8 @@
-import Button from "./components/common/Button";
+import SearchBar from "./components/searchSection/SearchBar";
+import Nav from "./components/UI/Nav";
 
 function App() {
-  return (
-    <>
-      <Button btnSize="btn52gray" btnStyle="grayBg" className="">
-        버튼
-      </Button>
-    </>
-  );
+  return <></>;
 }
 
 export default App;
