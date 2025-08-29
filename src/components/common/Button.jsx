@@ -2,7 +2,7 @@ import { BTN_SIZES, BTN_STYLES } from "./ButtonToken";
 
 const Button = ({
   type = "button",
-  btnSize = "btn-52",
+  btnSize = "btn52",
   btnStyle = "blueBg",
   className,
   onClick,
