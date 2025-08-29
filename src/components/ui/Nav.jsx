@@ -1,6 +1,6 @@
 const Nav = () => {
   return (
-    <div className="flex gap-3 ">
+    <div className="flex max-w-4xl gap-3 mx-auto bg-white">
       <img src="./icon.svg" alt="부동산 아이콘" />
       <div className="flex flex-col gap-2">
         <h1 className="text-lg">부동산 정보 통합 서비스</h1>

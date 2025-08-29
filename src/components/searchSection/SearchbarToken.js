@@ -1,5 +1,5 @@
 export const inputSize = {
-  searchbar500: "w-[500px] px-[42px] py-[14px] ",
+  searchbar500: "w-[500px] pl-[41px] pr-[70px] py-[14px] max-w-4xl mx-auto ",
 };
 
 export const inputStyle = {

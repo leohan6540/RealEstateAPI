@@ -1,3 +1,4 @@
+import Button from "../common/Button.jsx";
 import { inputSize, inputStyle } from "./SearchbarToken.js";
 
 const SearchBar = ({
@@ -6,6 +7,7 @@ const SearchBar = ({
   searchbarStyle = "searchbar500",
   className,
   //value,
+  btnChildren,
   ...props
 }) => {
   const sizeClass = inputSize[searchbarSize] || "";
@@ -14,7 +16,7 @@ const SearchBar = ({
   return (
     <div>
       <img
-        className="relative top-8"
+        className="relative w-4 top-[34px] left-2"
         src="./searchIcon.svg"
         alt="검색 아이콘"
       />
@@ -23,6 +25,7 @@ const SearchBar = ({
         className={`${className} ${sizeClass} ${styleClass}`}
         {...props}
       />
+      <Button className="relative right-16">{btnChildren}</Button>
     </div>
   );
 };
