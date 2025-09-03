@@ -1,15 +1,6 @@
 import AptItem from "./AptItem";
-import { getApartmentInfo } from "../../services/getApartmentInfo";
-// import { useState } from "react";
-//import { useEffect } from "react";
-import useService from "../../hooks/useService";
 
-const AptList = () => {
-  const { data: aptData } = useService(getApartmentInfo, {
-    pageNo: 1,
-    numOfRows: 10,
-  });
-
+const AptList = ({ aptData }) => {
   return (
     <div className="flex flex-col justify-center max-w-4xl mx-auto bg-white border rounded-xl">
       <div className="flex">
@@ -17,14 +8,15 @@ const AptList = () => {
         <div className="w-56 p-2 border-r">아파트 이름</div>
         <div className="p-2 ">아파트 주소</div>
       </div>
-      {aptData.map((apt) => {
+      {aptData.body?.items.map((apt, index) => {
         return (
           <AptItem
-            id={apt.kaptCode}
+            key={apt.kaptCode}
             name={apt.kaptName}
             address1={apt.as1}
             address2={apt.as2}
             address3={apt.as3}
+            number={index + 1}
           />
         );
       })}
